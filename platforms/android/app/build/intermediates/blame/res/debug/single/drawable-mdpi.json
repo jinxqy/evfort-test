@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\demo\\test\\evfortTest\\evfort\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_action_refresh.png",
+        "source": "D:\\demo\\test\\evfortTest\\evfort\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\ic_action_refresh.png"
+    },
+    {
+        "merged": "D:\\demo\\test\\evfortTest\\evfort\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_action_scan.png",
+        "source": "D:\\demo\\test\\evfortTest\\evfort\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\ic_action_scan.png"
+    }
+]
