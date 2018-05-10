@@ -1,7 +1,7 @@
 <template>
 	<div class="header-box">
 		<div class="dvZXHeader" style="padding-left: 20px;" @click="jumpSearch">
-			<text style="color: #FFFFFF; font-size: 16px;">公司资讯</text>
+			<text style="color: #FFFFFF; font-size: 1rem;">公司资讯</text>
 		</div>
 	</div>
 </template>

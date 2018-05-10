@@ -62,19 +62,26 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 33);
+/******/ 	return __webpack_require__(__webpack_require__.s = 31);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 33:
+/***/ 31:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
+/* styles */
+__vue_styles__.push(__webpack_require__(5)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(6)
+
 /* template */
-var __vue_template__ = __webpack_require__(34)
+var __vue_template__ = __webpack_require__(7)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -86,9 +93,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "D:\\demo\\test\\evfortTest\\evfort\\src\\components\\HelloWorld.vue"
+__vue_options__.__file = "D:\\demo\\test\\evfortTest\\evfort\\src\\components\\commuHeaderNav.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-2732cf40"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -106,13 +114,114 @@ new Vue(module.exports)
 
 /***/ }),
 
-/***/ 34:
+/***/ 5:
+/***/ (function(module, exports) {
+
+module.exports = {
+  "dvZXHeader": {
+    "width": "750",
+    "height": "100",
+    "display": "flex",
+    "flexDirection": "row",
+    "backgroundColor": "#00B4FF",
+    "justifyContent": "center",
+    "alignItems": "center"
+  },
+  "isMessage": {
+    "justifyContent": "center",
+    "alignItems": "center",
+    "height": "50",
+    "lineHeight": "50",
+    "width": "150",
+    "textAlign": "center",
+    "borderWidth": "1",
+    "borderStyle": "solid",
+    "borderColor": "#FFFFFF"
+  },
+  "notActive": {
+    "backgroundColor": "#00B4FF",
+    "color": "#FFFFFF"
+  },
+  "active": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#00B4FF"
+  }
+}
+
+/***/ }),
+
+/***/ 6:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+	data: function data() {
+		return {
+			classObject: {
+				active: true
+			}
+		};
+	},
+	methods: {
+		clickMessage: function clickMessage() {
+			this.classObject.active = true;
+			this.$emit('activeFlag', 0);
+		},
+		clickActive: function clickActive() {
+			this.classObject.active = false;
+			this.$emit('activeFlag', 1);
+		}
+	}
+};
+
+/***/ }),
+
+/***/ 7:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('text', {
-    staticClass: ["message"]
-  }, [_vm._v("Now, let's use Vue.js to build your Weex app.")])
+  return _c('div', {
+    staticClass: ["header-box"]
+  }, [_c('div', {
+    staticClass: ["dvZXHeader"],
+    staticStyle: {
+      paddingLeft: "20px"
+    },
+    on: {
+      "click": _vm.jumpSearch
+    }
+  }, [_c('div', [_c('text', {
+    staticClass: ["isMessage"],
+    class: [_vm.classObject.active === true ? 'active' : 'notActive'],
+    on: {
+      "click": _vm.clickMessage
+    }
+  }, [_vm._v("消息")])]), _c('div', [_c('text', {
+    staticClass: ["isMessage"],
+    class: [_vm.classObject.active === false ? 'active' : 'notActive'],
+    on: {
+      "click": _vm.clickActive
+    }
+  }, [_vm._v("活动")])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 

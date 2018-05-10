@@ -62,19 +62,19 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 33);
+/******/ 	return __webpack_require__(__webpack_require__.s = 38);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 33:
+/***/ 38:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* template */
-var __vue_template__ = __webpack_require__(34)
+var __vue_template__ = __webpack_require__(8)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -86,7 +86,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "D:\\demo\\test\\evfortTest\\evfort\\src\\components\\HelloWorld.vue"
+__vue_options__.__file = "D:\\demo\\test\\evfortTest\\evfort\\src\\components\\Message.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__.style = __vue_options__.style || {}
@@ -106,14 +106,27 @@ new Vue(module.exports)
 
 /***/ }),
 
-/***/ 34:
+/***/ 8:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('text', {
-    staticClass: ["message"]
-  }, [_vm._v("Now, let's use Vue.js to build your Weex app.")])
-},staticRenderFns: []}
+  return _c('div', [_c('inforHeaderNav'), _vm._m(0)], 1)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticStyle: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      width: "750px",
+      paddingTop: "100px"
+    }
+  }, [_c('text', {
+    staticStyle: {
+      color: "#999999"
+    }
+  }, [_vm._v("暂无任何消息")])])
+}]}
 module.exports.render._withStripped = true
 
 /***/ })

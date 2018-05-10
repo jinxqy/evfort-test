@@ -10,11 +10,13 @@
 
     <!-- 第二个页面内容-->
     <div class="item-container" :style="contentStyle">
-    	<!--<imformation :style="contentStyle"></imformation>-->
+    	<imformation :style="contentStyle"></imformation>
     </div>
 
     <!-- 第三个页面内容-->
-    <div class="item-container" :style="contentStyle"><text>消息中心</text></div>
+    <div class="item-container" :style="contentStyle">
+    	<community :style="contentStyle"></community>
+    </div>
 
     <!-- 第四个页面内容-->
     <div class="item-container" :style="contentStyle"><text>我的主页</text></div>
@@ -24,12 +26,13 @@
 <script>
   import { WxcTabBar, Utils } from 'weex-ui';
   import MapLocation from './MapLocation';
-//import Imformation from './Imformation';
+  import Imformation from './Imformation';
+  import Community from './Community';
   // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js 
   import Config from './config';
 
   export default {
-    components: { WxcTabBar, MapLocation},
+    components: { WxcTabBar, MapLocation, Imformation, Community},
     data: () => ({
       tabTitles: Config.tabTitles,
       tabStyles: Config.tabStyles
@@ -51,7 +54,7 @@
 </script>
 
 <style scoped>
-	.maplocation{
+	.maplocation {
 	  width: 750px;
 	  height: 100px;	
 	}

@@ -1,16 +1,16 @@
 <template>
    <div>
-   	  <!--<ml-headerNav></ml-headerNav>-->
-   	  <div>
-   	            暂无最新资讯
+   	  <inforHeaderNav></inforHeaderNav>
+   	  <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;width: 750px; padding-top: 100px;">
+   	        <text style="color: #999999;">暂无最新资讯</text>
    	  </div>
    </div>
 </template>
 
 <script>
-//	import inforHeaderNav from './mlHeaderNav'	
+	import inforHeaderNav from './inforHeaderNav'	
 	export default {
-		components: { mlHeaderNav },
+		components: { inforHeaderNav },
 		data: () => ({
 			
 		})
