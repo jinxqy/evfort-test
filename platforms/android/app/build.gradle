@@ -12,9 +12,9 @@ android {
         versionCode 1
         versionName "1.0.0"
         ndk {
-            abiFilters "x86"
-            abiFilters "armeabi"
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
         }
+
     }
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
@@ -80,4 +80,6 @@ dependencies {
     compile 'com.taobao.android:weexplugin-processor:1.3'
     compile 'com.taobao.android:weexplugin-annotation:1.3'
     // PLUGIN GRADLE EXTENSIONS END
+    compile 'com.amap.api:3dmap:latest.integration'
+    compile 'com.amap.api:location:latest.integration'
 }

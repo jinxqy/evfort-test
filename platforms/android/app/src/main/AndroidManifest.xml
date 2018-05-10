@@ -12,6 +12,16 @@
     <uses-feature android:name="android.hardware.camera"/>
     <uses-feature android:name="android.hardware.camera.autofocus"/>
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--<uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />-->
+
     <application
         android:name="com.weex.app.WXApplication"
         android:allowBackup="false"
@@ -21,6 +31,11 @@
         android:theme="@style/AppTheme"
         tools:overrideLibrary="com.taobao.android.dexposed"
         tools:replace="android:allowBackup">
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="8b7387f7b3d6e011f88d2787d84f9131"/>
+
         <activity
             android:name="com.weex.app.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -42,6 +57,9 @@
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="portrait"
             tools:replace="screenOrientation"/>
+
+        <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
+        <service android:name="com.amap.api.location.APSService" />
     </application>
 
 </manifest>
