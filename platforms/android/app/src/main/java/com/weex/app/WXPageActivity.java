@@ -102,6 +102,10 @@ public class WXPageActivity extends AbsWeexActivity implements
         }
       } catch (JSONException e) {
         e.printStackTrace();
+        String strUri = uri.toString();
+        if (strUri.startsWith("http")) {
+          mUri = Uri.parse(strUri);
+        }
       }
     }
 
